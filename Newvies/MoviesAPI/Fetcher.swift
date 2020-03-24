@@ -16,8 +16,9 @@ class Fetcher {
     
     
     func fetchLatest(type: DiscoverType, page: Int = 1, callback: @escaping FetchCallback) {
-        TMDBConfig.apikey = "ea28f920c00835f2af62b6560e3c6e3a"
-        let numberOfPages: Int = 6
+
+        TMDBConfig.apikey = Constants.TMBDKey
+        let numberOfPages: Int = 2
         var movies = [MovieMDB]()
         var tvShows = [TVMDB]()
         let queue = DispatchQueue.global(qos: .userInitiated)
@@ -29,7 +30,7 @@ class Fetcher {
                 let params: [DiscoverParam] = [.language("en"),
                                                .include_video(true),
                                                .page(subPage + i),
-                                               .sort_by("popularity.desc")]
+                                               .sort_by("release_date.desc")]
                 DiscoverMDB.discover(discoverType: type,
                                      params: params) { (clientReturn: ClientReturn, moviesArray: [MovieMDB]?, tvShowsArray: [TVMDB]?) in
                                         self?.semaphore.signal()
@@ -50,6 +51,7 @@ class Fetcher {
             self?.semaphore.wait()
             DispatchQueue.main.async {
                 callback(nil, movies, tvShows)
+                self?.semaphore.signal()
             }
 
         }

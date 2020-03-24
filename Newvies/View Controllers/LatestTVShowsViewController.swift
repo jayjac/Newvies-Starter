@@ -15,22 +15,44 @@ class LatestTVShowsViewController: UIViewController {
     private var tvShowFetcher: TVShowFetcher?
     @IBOutlet var tableView: UITableView!
     private var tvShows: [TVMDB] = [TVMDB]()
+    private var currentPage: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tvShowFetcher = TVShowFetcher(delegate: self)
         tableView.dataSource = self
-        tvShowFetcher?.fetchLatestTVShows()
-
+        tableView.delegate = self
+        loadTVShows(reload: true)
+        
     }
+    
+    
+    private func loadTVShows(reload: Bool) {
+        if reload {
+            currentPage = 0
+        }
+        currentPage += 1
+        tvShowFetcher?.fetchLatestTVShows(page: currentPage)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Advertising.default.addBanner(to: self)
+    }
+    
+    
     
 
 }
 
 extension LatestTVShowsViewController: TVShowFetcherDelegate {
     func tvShowFetcherDidLoad(tvShows: [TVMDB]) {
-        self.tvShows = tvShows
+        
+        if currentPage == 1 {
+            self.tvShows.removeAll()
+        }
+        self.tvShows.append(contentsOf: tvShows)
         self.tableView.reloadData()
     }
     
@@ -56,5 +78,24 @@ extension LatestTVShowsViewController: UITableViewDataSource {
         cell.setup(with: show)
         return cell
         
+    }
+}
+
+extension LatestTVShowsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let index = indexPath.row
+        if index == tvShows.count - 1 {
+            loadTVShows(reload: false)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let row = indexPath.row
+        let show = tvShows[row]
+        let showDetailsViewController = storyboard!.instantiateViewController(identifier: Constants.TVShowDetailsViewController) as! TVShowDetailsViewController
+        showDetailsViewController.tvShow = show
+        navigationController?.pushViewController(showDetailsViewController, animated: true)
     }
 }
