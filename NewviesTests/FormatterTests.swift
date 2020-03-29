@@ -2,7 +2,6 @@
 //  NVDateFormatter.swift
 //  NewviesTests
 //
-//  Created by Jay Jac on 3/18/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 

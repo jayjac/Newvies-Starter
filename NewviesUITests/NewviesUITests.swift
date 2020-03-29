@@ -2,7 +2,6 @@
 //  NewviesUITests.swift
 //  NewviesUITests
 //
-//  Created by Jay Jac on 3/15/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
