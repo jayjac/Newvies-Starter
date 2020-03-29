@@ -2,14 +2,22 @@
 //  NativeAdView.swift
 //  Newvies
 //
-//  Created by Jay Jac on 3/23/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
-import Appodeal
 
 class NativeAdView: UIView {
     
+    @IBOutlet var _titleLabel: UILabel!
+    @IBOutlet var _callToActionLabel: UILabel!
+    @IBOutlet var _mediaContainer: UIView!
+    
     
 }
+
+/*
+ * TODO:
+ * We must make the NativeAdView conform to the APDNativeAdView protocol
+ */
+
 

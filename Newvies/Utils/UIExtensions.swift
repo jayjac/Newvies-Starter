@@ -2,12 +2,15 @@
 //  UIExtensions.swift
 //  Newvies
 //
-//  Created by Jay Jac on 3/23/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
 import SDWebImage
 import TMDBSwift
+
+/*
+ * This file just adds come extensions to UILabel and UIImageView to help display repetitive content
+ */
 
 extension UILabel {
     
@@ -17,10 +20,21 @@ extension UILabel {
             let voteCount = voteCount,
             let date = date {
             let formattedDate = LabelTextFormatter.formatReleaseDate(date)
-            let voteCountInt = Int(voteCount)
-            let ratingsText = voteCountInt > 0 ? "Note: \(voteAverage)/10  (\(voteCountInt) votes)" : "(No votes yet)"
+            let formattedVoteCount = LabelTextFormatter.formatVoteCount(Int(voteCount))
+            let ratingsText = voteCount > 0 ? "Note: \(voteAverage)/10  (\(formattedVoteCount) votes)" : "(No votes yet)"
             text = "Out: \(formattedDate) • \(ratingsText)"
         }
+    }
+    
+    
+    func nmv_setGenres(genres: [MovieMDB.genresType]) {
+        var genreText = ""
+        for genre in genres {
+            if let name = genre.name {
+                genreText += "  \(name)  "
+            }
+        }
+        text = genreText
     }
 }
 

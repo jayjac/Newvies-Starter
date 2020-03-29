@@ -9,7 +9,7 @@
 import XCTest
 @testable import Newvies
 
-class NVDateFormatterTests: XCTestCase {
+class FormatterTests: XCTestCase {
 
 
 
@@ -18,6 +18,11 @@ class NVDateFormatterTests: XCTestCase {
         formatter.dateFormat = "yyyy-MM-dd"
         let date = formatter.date(from: "2020-03-20")
         XCTAssertNotNil(date)
+    }
+    
+    func test_NumberFormats() {
+        let number = 1200
+        print(LabelTextFormatter.formatVoteCount(number))
     }
 
 

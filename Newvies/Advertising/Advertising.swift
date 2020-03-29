@@ -2,11 +2,10 @@
 //  Advertising.swift
 //  Newvies
 //
-//  Created by Jay Jac on 3/17/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
-import Appodeal
+
 
 typealias RewardVideoCallback = () -> Void
 
@@ -14,32 +13,50 @@ class Advertising: NSObject {
     
     static let `default` = Advertising()
     private var callback: RewardVideoCallback?
+
     
     private override init() {
         super.init()
     }
 
     func initializeSDK() {
-        Appodeal.setRewardedVideoDelegate(self)
-        Appodeal.initialize(withApiKey: Constants.appodealKey, types: [.rewardedVideo, .nativeAd, .interstitial, .banner])
+        /*
+         * Initialize Appodeal SDK
+         */
+    }
+    
+    func retrieveAdView(for vc: UIViewController) -> UIView? {
+        /*
+         * Get the native ad view
+         */
     }
     
     func addBanner(to vc: UIViewController) {
-        Appodeal.showAd(.bannerBottom, rootViewController: vc)
+         /*
+         * Add banner
+         */
+    }
+    
+    func removeBanner() {
+        /*
+         * Remove Banner when user has paid
+         */
+    }
+    
+    static func showInterstitialRandomly(from vc: UIViewController) -> Bool {
+        /**
+         
+         */
+        return false
     }
     
     
     func playRewardedVideo(from rootVC: UIViewController, callback: @escaping RewardVideoCallback) {
-        self.callback = callback
-        Appodeal.showAd(.rewardedVideo, rootViewController: rootVC)
+        /*
+         * Play the ad video
+         */
     }
 }
 
 
-extension Advertising: AppodealRewardedVideoDelegate {
-    
-    func rewardedVideoWillDismissAndWasFullyWatched(_ wasFullyWatched: Bool) {
-        callback?()
-    }
 
-}

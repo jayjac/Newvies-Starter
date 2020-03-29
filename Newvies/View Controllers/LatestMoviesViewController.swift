@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  Newvies
 //
-//  Created by Jay Jac on 3/15/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
@@ -14,27 +13,51 @@ class LatestMoviesViewController: UIViewController {
     private var movieFetcher: MovieFetcher?
     @IBOutlet var tableView: UITableView!
     private var currentPage: Int = 0
+    private var isPaidUser: Bool = false
+    private let refreshControl = UIRefreshControl()
 
     private var movieCellModelArray: [LatestMovieCellModel] = [LatestMovieCellModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         movieFetcher = MovieFetcher(delegate: self)
+        setupTableView()
+        loadMovies(reload: true)
+        NotificationCenter.default.addObserver(self, selector: #selector(userJustPaid), name: .noAdPurchase, object: nil)
+        
+    }
+    
+    @IBAction func plusBarButtonTapped(_ sender: Any) {
+        InAppViewController.show(from: self)
+    }
+    
+    private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 100.0
         tableView.rowHeight = UITableView.automaticDimension
-        loadMovies(reload: true)
+        
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: UIControl.Event.valueChanged)
+        tableView.refreshControl = refreshControl
     }
     
-    func loadMovies(reload: Bool) {
+    @objc func pullToRefresh() {
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 2.0) {
+            self.loadMovies(reload: true)
+        }
+    }
+    
+    @objc func userJustPaid() {
+        loadMovies(reload: false)
+    }
+    
+    @objc func loadMovies(reload: Bool) {
+        isPaidUser = InAppManager.default.isUserPaid()
         if reload {
             currentPage = 0
         }
         currentPage += 1
         movieFetcher?.fetchLatestMovies(page: currentPage)
-        
     }
 
 }
@@ -43,9 +66,7 @@ class LatestMoviesViewController: UIViewController {
 
 extension LatestMoviesViewController: MovieFetcherDelegate {
     func movieFetcherDidLoad(movies: [MovieMDB]) {
-        /**
-         
-         */
+        refreshControl.endRefreshing()
         if currentPage == 1 {
             movieCellModelArray.removeAll()
         }
@@ -53,8 +74,11 @@ extension LatestMoviesViewController: MovieFetcherDelegate {
             _ = movieCellModelArray.popLast()
         }
         movieCellModelArray.append(contentsOf: movies.map({ LatestMovieCellModel(cellType: .movie, payload: $0) }))
-        let adCell = LatestMovieCellModel(cellType: .rewardedVideoAd, payload: nil)
-        movieCellModelArray.append(adCell)
+        
+        if !isPaidUser {
+            let adCell = LatestMovieCellModel(cellType: .rewardedVideoAd, payload: nil)
+            movieCellModelArray.append(adCell)
+        }
         tableView.reloadData()
     }
     
@@ -85,9 +109,10 @@ extension LatestMoviesViewController: UITableViewDataSource {
             return cell
             
         case .rewardedVideoAd:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.rewardedVideoAdCellIdentifier) else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.rewardedVideoAdCellIdentifier) as? PlayVideoAdTableViewCell else {
                 fatalError()
             }
+            cell.rootViewController = self
             return cell
         }
         
@@ -96,6 +121,16 @@ extension LatestMoviesViewController: UITableViewDataSource {
 
 extension LatestMoviesViewController: UITableViewDelegate {
     
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        /*
+         * If this is the last row and the user is premium
+         */
+        if isPaidUser && tableView.isDragging && row == movieCellModelArray.count - 1 {
+            loadMovies(reload: false)
+        }
+    }
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

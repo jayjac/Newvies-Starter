@@ -2,13 +2,11 @@
 //  MovieDetailsViewController.swift
 //  Newvies
 //
-//  Created by Jay Jac on 3/16/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
 import UIKit
 import TMDBSwift
-import SDWebImage
 import SafariServices
 
 class MovieDetailsViewController: UIViewController {
@@ -40,7 +38,9 @@ class MovieDetailsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if !alreadyDisplayedAd {
-            alreadyDisplayedAd = InterstitialAdManager.showInterstitialRandomly(from: self)
+            /*
+             * Show interstitial advertising randomly
+             */
         }
     }
     
@@ -91,13 +91,8 @@ class MovieDetailsViewController: UIViewController {
         descriptionLabel.text = details.overview
         releaseDateLabel.nmv_setReleaseDateAndRatings(date: movie?.release_date, voteAverage: movie?.vote_average, voteCount: movie?.vote_count)
 
-        var genreText = ""
-        for genre in details.genres {
-            if let name = genre.name {
-                genreText += "  \(name)  "
-            }
-        }
-        genresLabel.text = genreText
+        genresLabel.nmv_setGenres(genres: details.genres)
+
         
     }
     
@@ -116,10 +111,8 @@ class MovieDetailsViewController: UIViewController {
                 reviewsText += Constants.reviewSeparator
             }
             reviewsText += "\(author): \(content)"
-            
         }
-        print(reviewsText)
-        reviewsLabel.text = reviewsText
+        reviewsLabel.text = !reviewsText.isEmpty ? reviewsText : "No reviews"
     }
     
     func setupUI() {

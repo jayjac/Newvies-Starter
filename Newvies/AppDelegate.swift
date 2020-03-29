@@ -2,7 +2,6 @@
 //  AppDelegate.swift
 //  Newvies
 //
-//  Created by Jay Jac on 3/15/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
@@ -19,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Advertising.default.initializeSDK()
+        InAppManager.default.initialize()
         return true
     }
 

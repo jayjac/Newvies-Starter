@@ -2,7 +2,6 @@
 //  MovieFetcher.swift
 //  Newvies
 //
-//  Created by Jay Jac on 3/15/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
@@ -47,7 +46,7 @@ class MovieFetcher {
                 }
             }
             DispatchQueue.main.async {
-                self?.delegate?.movieFetcherDidLoad(movies: moviesArray)
+                self?.delegate?.movieFetcherDidLoad(movies: moviesArray.shuffled())
             }
         }
 

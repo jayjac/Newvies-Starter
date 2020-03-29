@@ -3,19 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4BD2984FC6E5144360298F93 /* Pods_NewviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA05085582B26528B51EC2F7 /* Pods_NewviesTests.framework */; };
-		6757D0D3AF01E95087B5622C /* Pods_Newvies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884B08F8D012E4A938B46E1C /* Pods_Newvies.framework */; };
-		8690BEDB51E7F3A99C120C34 /* Pods_Newvies_NewviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2418E90B06A62E5D6CEE83 /* Pods_Newvies_NewviesUITests.framework */; };
 		E96C03AE2429599100D2844D /* Array+FilterNotComplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C03AD2429599100D2844D /* Array+FilterNotComplete.swift */; };
 		E96C03B0242977A600D2844D /* TVShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C03AF242977A600D2844D /* TVShowDetailsViewController.swift */; };
 		E97FC234242908A300648836 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97FC233242908A300648836 /* UIExtensions.swift */; };
 		E97FC23624290DB700648836 /* NativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E97FC23524290DB700648836 /* NativeAdView.xib */; };
 		E97FC23824290DD200648836 /* NativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97FC23724290DD200648836 /* NativeAdView.swift */; };
-		E97FC23A24290E9800648836 /* InterstitialAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97FC23924290E9800648836 /* InterstitialAdManager.swift */; };
 		E994B159241F0C330016F638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994B158241F0C330016F638 /* AppDelegate.swift */; };
 		E994B15B241F0C330016F638 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994B15A241F0C330016F638 /* SceneDelegate.swift */; };
 		E994B15D241F0C330016F638 /* LatestMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994B15C241F0C330016F638 /* LatestMoviesViewController.swift */; };
@@ -31,13 +27,15 @@
 		E994B196241FFBB90016F638 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994B195241FFBB90016F638 /* MovieDetailsViewController.swift */; };
 		E994B198242018D60016F638 /* LatestTVShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994B197242018D60016F638 /* LatestTVShowsViewController.swift */; };
 		E994B19A242029680016F638 /* SimpleAlertPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E994B199242029680016F638 /* SimpleAlertPopup.swift */; };
-		E9E6B544242061B4000EE0F7 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6B543242061B4000EE0F7 /* Fetcher.swift */; };
 		E9E6B54624207AB3000EE0F7 /* TVShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6B54524207AB3000EE0F7 /* TVShowTableViewCell.swift */; };
 		E9E6B5492420FEAD000EE0F7 /* LatestMovieCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6B5482420FEAD000EE0F7 /* LatestMovieCellModel.swift */; };
 		E9E6B54E24210864000EE0F7 /* Advertising.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6B54D24210864000EE0F7 /* Advertising.swift */; };
-		E9E6B55024214A05000EE0F7 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6B54F24214A05000EE0F7 /* TestViewController.swift */; };
-		E9E6B55324216AC7000EE0F7 /* Dateformatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6B55224216AC7000EE0F7 /* Dateformatter.swift */; };
-		E9E6B55524229274000EE0F7 /* NVDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6B55424229274000EE0F7 /* NVDateFormatterTests.swift */; };
+		E9E6B55324216AC7000EE0F7 /* LabelTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6B55224216AC7000EE0F7 /* LabelTextFormatter.swift */; };
+		E9E6B55524229274000EE0F7 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E6B55424229274000EE0F7 /* FormatterTests.swift */; };
+		E9F88AEF242A3E4300AB8570 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F88AEE242A3E4300AB8570 /* ArrayExtension.swift */; };
+		E9F88AF2242A559300AB8570 /* InAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F88AF1242A559300AB8570 /* InAppManager.swift */; };
+		E9F88AF4242A5DFC00AB8570 /* InAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F88AF3242A5DFC00AB8570 /* InAppViewController.swift */; };
+		E9F88AF6242A736600AB8570 /* PlayVideoAdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F88AF5242A736600AB8570 /* PlayVideoAdTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,20 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F2418E90B06A62E5D6CEE83 /* Pods_Newvies_NewviesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newvies_NewviesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		39285477B8E5E5C49E1E6D28 /* Pods-Newvies-NewviesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newvies-NewviesUITests.release.xcconfig"; path = "Target Support Files/Pods-Newvies-NewviesUITests/Pods-Newvies-NewviesUITests.release.xcconfig"; sourceTree = "<group>"; };
-		43E4728FC29AB825C4E3593D /* Pods-Newvies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newvies.release.xcconfig"; path = "Target Support Files/Pods-Newvies/Pods-Newvies.release.xcconfig"; sourceTree = "<group>"; };
-		5D08EFCD0513151535D89900 /* Pods-NewviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewviesTests.release.xcconfig"; path = "Target Support Files/Pods-NewviesTests/Pods-NewviesTests.release.xcconfig"; sourceTree = "<group>"; };
-		884B08F8D012E4A938B46E1C /* Pods_Newvies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newvies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3629C139404C5C9BC63A59C /* Pods-Newvies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newvies.debug.xcconfig"; path = "Target Support Files/Pods-Newvies/Pods-Newvies.debug.xcconfig"; sourceTree = "<group>"; };
-		BAEC0DBA9CEB5D6930D29F56 /* Pods-NewviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewviesTests.debug.xcconfig"; path = "Target Support Files/Pods-NewviesTests/Pods-NewviesTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D49C3CFFB7DFC32CD3C2A679 /* Pods-Newvies-NewviesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newvies-NewviesUITests.debug.xcconfig"; path = "Target Support Files/Pods-Newvies-NewviesUITests/Pods-Newvies-NewviesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E96C03AD2429599100D2844D /* Array+FilterNotComplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+FilterNotComplete.swift"; sourceTree = "<group>"; };
 		E96C03AF242977A600D2844D /* TVShowDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailsViewController.swift; sourceTree = "<group>"; };
 		E97FC233242908A300648836 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		E97FC23524290DB700648836 /* NativeAdView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeAdView.xib; sourceTree = "<group>"; };
 		E97FC23724290DD200648836 /* NativeAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdView.swift; sourceTree = "<group>"; };
-		E97FC23924290E9800648836 /* InterstitialAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdManager.swift; sourceTree = "<group>"; };
 		E994B155241F0C330016F638 /* Newvies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newvies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E994B158241F0C330016F638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E994B15A241F0C330016F638 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,14 +82,15 @@
 		E994B195241FFBB90016F638 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		E994B197242018D60016F638 /* LatestTVShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTVShowsViewController.swift; sourceTree = "<group>"; };
 		E994B199242029680016F638 /* SimpleAlertPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertPopup.swift; sourceTree = "<group>"; };
-		E9E6B543242061B4000EE0F7 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		E9E6B54524207AB3000EE0F7 /* TVShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowTableViewCell.swift; sourceTree = "<group>"; };
 		E9E6B5482420FEAD000EE0F7 /* LatestMovieCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestMovieCellModel.swift; sourceTree = "<group>"; };
 		E9E6B54D24210864000EE0F7 /* Advertising.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertising.swift; sourceTree = "<group>"; };
-		E9E6B54F24214A05000EE0F7 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		E9E6B55224216AC7000EE0F7 /* Dateformatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dateformatter.swift; sourceTree = "<group>"; };
-		E9E6B55424229274000EE0F7 /* NVDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVDateFormatterTests.swift; sourceTree = "<group>"; };
-		FA05085582B26528B51EC2F7 /* Pods_NewviesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewviesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9E6B55224216AC7000EE0F7 /* LabelTextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTextFormatter.swift; sourceTree = "<group>"; };
+		E9E6B55424229274000EE0F7 /* FormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
+		E9F88AEE242A3E4300AB8570 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		E9F88AF1242A559300AB8570 /* InAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppManager.swift; sourceTree = "<group>"; };
+		E9F88AF3242A5DFC00AB8570 /* InAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppViewController.swift; sourceTree = "<group>"; };
+		E9F88AF5242A736600AB8570 /* PlayVideoAdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoAdTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6757D0D3AF01E95087B5622C /* Pods_Newvies.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BD2984FC6E5144360298F93 /* Pods_NewviesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,32 +112,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8690BEDB51E7F3A99C120C34 /* Pods_Newvies_NewviesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F90ABD909CBD749759FD44E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				884B08F8D012E4A938B46E1C /* Pods_Newvies.framework */,
-				0F2418E90B06A62E5D6CEE83 /* Pods_Newvies_NewviesUITests.framework */,
-				FA05085582B26528B51EC2F7 /* Pods_NewviesTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		DBF0A83BC57BA830A9816E82 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A3629C139404C5C9BC63A59C /* Pods-Newvies.debug.xcconfig */,
-				43E4728FC29AB825C4E3593D /* Pods-Newvies.release.xcconfig */,
-				D49C3CFFB7DFC32CD3C2A679 /* Pods-Newvies-NewviesUITests.debug.xcconfig */,
-				39285477B8E5E5C49E1E6D28 /* Pods-Newvies-NewviesUITests.release.xcconfig */,
-				BAEC0DBA9CEB5D6930D29F56 /* Pods-NewviesTests.debug.xcconfig */,
-				5D08EFCD0513151535D89900 /* Pods-NewviesTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -162,7 +133,6 @@
 				E994B179241F0C350016F638 /* NewviesUITests */,
 				E994B156241F0C330016F638 /* Products */,
 				DBF0A83BC57BA830A9816E82 /* Pods */,
-				2F90ABD909CBD749759FD44E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,15 +149,16 @@
 		E994B157241F0C330016F638 /* Newvies */ = {
 			isa = PBXGroup;
 			children = (
-				E994B163241F0C350016F638 /* LaunchScreen.storyboard */,
+				E994B158241F0C330016F638 /* AppDelegate.swift */,
 				E994B15E241F0C330016F638 /* Main.storyboard */,
+				E994B163241F0C350016F638 /* LaunchScreen.storyboard */,
+				E9F88AF0242A557D00AB8570 /* InApp */,
 				E9E6B55124216AB3000EE0F7 /* Utils */,
 				E9E6B54C24210856000EE0F7 /* Advertising */,
 				E9E6B5472420FE88000EE0F7 /* Models */,
 				E994B194241FFB920016F638 /* View Controllers */,
 				E994B18F241FE3170016F638 /* Views */,
 				E994B188241F2D020016F638 /* MoviesAPI */,
-				E994B158241F0C330016F638 /* AppDelegate.swift */,
 				E994B15A241F0C330016F638 /* SceneDelegate.swift */,
 				E994B161241F0C350016F638 /* Assets.xcassets */,
 				E994B166241F0C350016F638 /* Info.plist */,
@@ -200,7 +171,8 @@
 			children = (
 				E994B16F241F0C350016F638 /* NewviesTests.swift */,
 				E994B171241F0C350016F638 /* Info.plist */,
-				E9E6B55424229274000EE0F7 /* NVDateFormatterTests.swift */,
+				E9E6B55424229274000EE0F7 /* FormatterTests.swift */,
+				E9F88AEE242A3E4300AB8570 /* ArrayExtension.swift */,
 			);
 			path = NewviesTests;
 			sourceTree = "<group>";
@@ -217,7 +189,6 @@
 		E994B188241F2D020016F638 /* MoviesAPI */ = {
 			isa = PBXGroup;
 			children = (
-				E9E6B543242061B4000EE0F7 /* Fetcher.swift */,
 				E994B189241F2D8F0016F638 /* MovieFetcher.swift */,
 				E994B18B241FDB190016F638 /* TVShowFetcher.swift */,
 			);
@@ -232,6 +203,7 @@
 				E9E6B54524207AB3000EE0F7 /* TVShowTableViewCell.swift */,
 				E97FC23524290DB700648836 /* NativeAdView.xib */,
 				E97FC23724290DD200648836 /* NativeAdView.swift */,
+				E9F88AF5242A736600AB8570 /* PlayVideoAdTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,8 +214,8 @@
 				E994B15C241F0C330016F638 /* LatestMoviesViewController.swift */,
 				E994B197242018D60016F638 /* LatestTVShowsViewController.swift */,
 				E994B195241FFBB90016F638 /* MovieDetailsViewController.swift */,
-				E9E6B54F24214A05000EE0F7 /* TestViewController.swift */,
 				E96C03AF242977A600D2844D /* TVShowDetailsViewController.swift */,
+				E9F88AF3242A5DFC00AB8570 /* InAppViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -268,12 +240,19 @@
 			isa = PBXGroup;
 			children = (
 				E994B192241FE5130016F638 /* Constants.swift */,
-				E9E6B55224216AC7000EE0F7 /* Dateformatter.swift */,
+				E9E6B55224216AC7000EE0F7 /* LabelTextFormatter.swift */,
 				E97FC233242908A300648836 /* UIExtensions.swift */,
-				E97FC23924290E9800648836 /* InterstitialAdManager.swift */,
 				E96C03AD2429599100D2844D /* Array+FilterNotComplete.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E9F88AF0242A557D00AB8570 /* InApp */ = {
+			isa = PBXGroup;
+			children = (
+				E9F88AF1242A559300AB8570 /* InAppManager.swift */,
+			);
+			path = InApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,12 +262,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E994B17F241F0C350016F638 /* Build configuration list for PBXNativeTarget "Newvies" */;
 			buildPhases = (
-				D10EEDA3103CF51283B4B33D /* [CP] Check Pods Manifest.lock */,
 				E994B151241F0C330016F638 /* Sources */,
 				E994B152241F0C330016F638 /* Frameworks */,
 				E994B153241F0C330016F638 /* Resources */,
-				C84108C7471AB440955F5F7F /* [CP] Embed Pods Frameworks */,
-				543DC98E5C881EEFE5FDDC1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,7 +279,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E994B182241F0C350016F638 /* Build configuration list for PBXNativeTarget "NewviesTests" */;
 			buildPhases = (
-				2FFC5B8BC10DA3BEE5C19634 /* [CP] Check Pods Manifest.lock */,
 				E994B167241F0C350016F638 /* Sources */,
 				E994B168241F0C350016F638 /* Frameworks */,
 				E994B169241F0C350016F638 /* Resources */,
@@ -322,12 +297,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E994B185241F0C350016F638 /* Build configuration list for PBXNativeTarget "NewviesUITests" */;
 			buildPhases = (
-				C9881AE27084A4E9720A6A99 /* [CP] Check Pods Manifest.lock */,
 				E994B172241F0C350016F638 /* Sources */,
 				E994B173241F0C350016F638 /* Frameworks */,
 				E994B174241F0C350016F638 /* Resources */,
-				AB69E99350608FAD3B983450 /* [CP] Embed Pods Frameworks */,
-				F8A8468558201EA97B8C9D63 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -410,156 +382,19 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2FFC5B8BC10DA3BEE5C19634 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NewviesTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		543DC98E5C881EEFE5FDDC1D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newvies/Pods-Newvies-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newvies/Pods-Newvies-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newvies/Pods-Newvies-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB69E99350608FAD3B983450 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newvies-NewviesUITests/Pods-Newvies-NewviesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newvies-NewviesUITests/Pods-Newvies-NewviesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newvies-NewviesUITests/Pods-Newvies-NewviesUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C84108C7471AB440955F5F7F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newvies/Pods-Newvies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newvies/Pods-Newvies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newvies/Pods-Newvies-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9881AE27084A4E9720A6A99 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Newvies-NewviesUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D10EEDA3103CF51283B4B33D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Newvies-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F8A8468558201EA97B8C9D63 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newvies-NewviesUITests/Pods-Newvies-NewviesUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Newvies-NewviesUITests/Pods-Newvies-NewviesUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Newvies-NewviesUITests/Pods-Newvies-NewviesUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		E994B151241F0C330016F638 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E6B55324216AC7000EE0F7 /* Dateformatter.swift in Sources */,
+				E9E6B55324216AC7000EE0F7 /* LabelTextFormatter.swift in Sources */,
 				E994B196241FFBB90016F638 /* MovieDetailsViewController.swift in Sources */,
-				E9E6B544242061B4000EE0F7 /* Fetcher.swift in Sources */,
+				E9F88AF6242A736600AB8570 /* PlayVideoAdTableViewCell.swift in Sources */,
 				E994B19A242029680016F638 /* SimpleAlertPopup.swift in Sources */,
 				E994B18C241FDB190016F638 /* TVShowFetcher.swift in Sources */,
 				E96C03AE2429599100D2844D /* Array+FilterNotComplete.swift in Sources */,
 				E994B15D241F0C330016F638 /* LatestMoviesViewController.swift in Sources */,
-				E97FC23A24290E9800648836 /* InterstitialAdManager.swift in Sources */,
+				E9F88AF2242A559300AB8570 /* InAppManager.swift in Sources */,
 				E96C03B0242977A600D2844D /* TVShowDetailsViewController.swift in Sources */,
 				E994B191241FE3340016F638 /* MovieTableViewCell.swift in Sources */,
 				E9E6B5492420FEAD000EE0F7 /* LatestMovieCellModel.swift in Sources */,
@@ -567,8 +402,8 @@
 				E994B198242018D60016F638 /* LatestTVShowsViewController.swift in Sources */,
 				E994B159241F0C330016F638 /* AppDelegate.swift in Sources */,
 				E9E6B54E24210864000EE0F7 /* Advertising.swift in Sources */,
-				E9E6B55024214A05000EE0F7 /* TestViewController.swift in Sources */,
 				E994B193241FE5130016F638 /* Constants.swift in Sources */,
+				E9F88AF4242A5DFC00AB8570 /* InAppViewController.swift in Sources */,
 				E994B18A241F2D8F0016F638 /* MovieFetcher.swift in Sources */,
 				E97FC234242908A300648836 /* UIExtensions.swift in Sources */,
 				E9E6B54624207AB3000EE0F7 /* TVShowTableViewCell.swift in Sources */,
@@ -580,7 +415,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E6B55524229274000EE0F7 /* NVDateFormatterTests.swift in Sources */,
+				E9F88AEF242A3E4300AB8570 /* ArrayExtension.swift in Sources */,
+				E9E6B55524229274000EE0F7 /* FormatterTests.swift in Sources */,
 				E994B170241F0C350016F638 /* NewviesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,11 +580,10 @@
 		};
 		E994B180241F0C350016F638 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3629C139404C5C9BC63A59C /* Pods-Newvies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = EYJ8W2A8H5;
 				INFOPLIST_FILE = Newvies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -756,7 +591,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "jean-yves.Newvies";
+				PRODUCT_BUNDLE_IDENTIFIER = udemy.Newvies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -765,11 +600,10 @@
 		};
 		E994B181241F0C350016F638 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43E4728FC29AB825C4E3593D /* Pods-Newvies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = EYJ8W2A8H5;
 				INFOPLIST_FILE = Newvies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -777,7 +611,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "jean-yves.Newvies";
+				PRODUCT_BUNDLE_IDENTIFIER = udemy.Newvies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -786,7 +620,6 @@
 		};
 		E994B183241F0C350016F638 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAEC0DBA9CEB5D6930D29F56 /* Pods-NewviesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -809,7 +642,6 @@
 		};
 		E994B184241F0C350016F638 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D08EFCD0513151535D89900 /* Pods-NewviesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -832,7 +664,6 @@
 		};
 		E994B186241F0C350016F638 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D49C3CFFB7DFC32CD3C2A679 /* Pods-Newvies-NewviesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -853,7 +684,6 @@
 		};
 		E994B187241F0C350016F638 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39285477B8E5E5C49E1E6D28 /* Pods-Newvies-NewviesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

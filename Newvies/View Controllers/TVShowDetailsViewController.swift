@@ -2,7 +2,6 @@
 //  TVShowDetailsViewController.swift
 //  Newvies
 //
-//  Created by Jay Jac on 3/23/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
@@ -11,31 +10,57 @@ import TMDBSwift
 
 class TVShowDetailsViewController: UIViewController {
     
-    var tvShow: TVMDB?
+    var tvShow: TVMDB!
     @IBOutlet var posterImageView: UIImageView!
+    @IBOutlet var adContainerView: UIView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var createdByLabel: UILabel!
+    @IBOutlet var airDateLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var episodeCountLabel: UILabel!
+    @IBOutlet var genresLabel: UILabel!
+    @IBOutlet var homepageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        retrieveTVShow()
+        
+        addNativeAdView()
+        retrieveTVShowDetails()
     }
     
-    func retrieveTVShow() {
-        guard let show = tvShow else {
-            fatalError()
+    private func addNativeAdView() {
+        guard !InAppManager.default.isUserPaid() else {
+            adContainerView.isHidden = true
+            return
         }
-        posterImageView.nmv_setBackdrop(show: show)
-        TVMDB.tv(tvShowID: show.id, language: "en") { (cr: ClientReturn, detail: TVDetailedMDB?) in
+        if let view = Advertising.default.retrieveAdView(for: self) {
+            adContainerView.addSubview(view)
+            view.frame =  adContainerView.bounds
+        }
+    }
+    
+    private func retrieveTVShowDetails() {
+
+        posterImageView.nmv_setBackdrop(show: tvShow)
+        
+        TVMDB.tv(tvShowID: tvShow.id, language: "en") { (cr: ClientReturn, detail: TVDetailedMDB?) in
             guard let detail = detail else { return }
             DispatchQueue.main.async {
                 [weak self] in
                 guard let strongSelf = self else { return }
                 
-                //strongSelf.titleLabel.text = detail.name
+                strongSelf.titleLabel.text = detail.name
+                strongSelf.createdByLabel.text = "By \(detail.createdBy?.name ?? "unknown")"
+                strongSelf.airDateLabel.text = "Debut " +  LabelTextFormatter.formatReleaseDate(detail.first_air_date ?? "unknown")
+                strongSelf.descriptionLabel.text = detail.overview
                 
-                //strongSelf.createdByLabel.text = detail.createdBy?.name
+                strongSelf.homepageLabel.text = detail.homepage
+                strongSelf.genresLabel.nmv_setGenres(genres: detail.genres)
+                
+                if let episodes = detail.number_of_episodes {
+                    strongSelf.episodeCountLabel.text = "Episode(s): \(episodes) | Season(s): \(detail.seasons.count)"
+                }
+                
             }
             
         }
@@ -46,14 +71,5 @@ class TVShowDetailsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

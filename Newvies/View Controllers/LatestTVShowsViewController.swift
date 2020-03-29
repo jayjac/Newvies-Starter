@@ -2,7 +2,6 @@
 //  LatestTVShowsViewController.swift
 //  Newvies
 //
-//  Created by Jay Jac on 3/16/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
@@ -24,7 +23,11 @@ class LatestTVShowsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         loadTVShows(reload: true)
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(removeAdBanner), name: .noAdPurchase, object: nil)
+    }
+    
+    @IBAction func plusBarButtonTapped(_ sender: Any) {
+        InAppViewController.show(from: self)
     }
     
     
@@ -38,7 +41,17 @@ class LatestTVShowsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Advertising.default.addBanner(to: self)
+        addAdBanner()
+    }
+    
+    private func addAdBanner() {
+        if !InAppManager.default.isUserPaid() {
+            Advertising.default.addBanner(to: self)
+        }
+    }
+    
+    @objc private func removeAdBanner() {
+        Advertising.default.removeBanner()
     }
     
     
@@ -85,7 +98,7 @@ extension LatestTVShowsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let index = indexPath.row
-        if index == tvShows.count - 1 {
+        if index == tvShows.count - 1 && tableView.isDragging {
             loadTVShows(reload: false)
         }
     }

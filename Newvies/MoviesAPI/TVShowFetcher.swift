@@ -2,7 +2,6 @@
 //  TVShowFetcher.swift
 //  Newvies
 //
-//  Created by Jay Jac on 3/16/20.
 //  Copyright © 2020 Jacaria. All rights reserved.
 //
 
@@ -14,13 +13,13 @@ protocol TVShowFetcherDelegate: class {
     func tvShowFetcherDidFail(error: Error)
 }
 
-class TVShowFetcher: Fetcher {
+class TVShowFetcher {
     
     private weak var delegate: TVShowFetcherDelegate?
     private let semaphore = DispatchSemaphore(value: 1)
     
     init(delegate: TVShowFetcherDelegate) {
-        TMDBConfig.apikey = "ea28f920c00835f2af62b6560e3c6e3a"
+        TMDBConfig.apikey = Constants.TMBDKey
         self.delegate = delegate
     }
     
@@ -48,24 +47,12 @@ class TVShowFetcher: Fetcher {
                     }
                 }
                 DispatchQueue.main.async {
-                    self?.delegate?.tvShowFetcherDidLoad(tvShows: tvShowsArray)
+                    self?.delegate?.tvShowFetcherDidLoad(tvShows: tvShowsArray.shuffled())
                 }
             }
 
         }
         
-
-        
-        fetchLatest(type: .tv, page: page) { [unowned self] (error, movies, tvShows) in
-            if let error = error {
-                self.delegate?.tvShowFetcherDidFail(error: error)
-                return
-            }
-            if let tvShows = tvShows {
-                self.delegate?.tvShowFetcherDidLoad(tvShows: tvShows)
-                return
-            }
-        }
     }
     
 }
